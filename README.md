@@ -20,3 +20,6 @@ Support for parentheses
 
 # Article used for the implementation
 https://swtch.com/~rsc/regexp/regexp1.html
+
+# Object files and dynamic libraries 
+https://stackoverflow.com/questions/23615282/object-files-vs-library-files-and-why
