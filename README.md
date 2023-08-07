@@ -17,3 +17,6 @@ gcc -o exec regex.c NFASimulator.c main.c
 Support for parentheses
 
 # Trying to compile for the ARM cortex m4
+
+# Article used for the implementation
+https://swtch.com/~rsc/regexp/regexp1.html
