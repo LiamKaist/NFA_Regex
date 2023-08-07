@@ -9,3 +9,11 @@ I am basing my code on an article
 
 Then I would like to integrate that code on my STM32 and check its memory to see if it has processed the word correctly
 
+# To compile 
+
+gcc -o exec regex.c NFASimulator.c main.c
+
+# To add later on
+Support for parentheses
+
+# Trying to compile for the ARM cortex m4

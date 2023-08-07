@@ -18,7 +18,6 @@ int match(STATE* start, char* s)
     nlist = &l2;
     for(; *s;s++)
     {
-        printf("Going through the word %c\n",*s);
         step(clist,*s,nlist);
         t = clist; clist = nlist; nlist = t; /* Swapping lists */
     }
@@ -36,10 +35,8 @@ int ismatch(LIST* l)
 
 void addState(LIST *l, STATE * s)
 {
-    printf("adding state %d \n",listid);
     if(s == NULL || s->lastlist == listid)
     {
-        printf("Null or redundant \n");
         return;
     }
     s->lastlist = listid;
@@ -55,7 +52,6 @@ void addState(LIST *l, STATE * s)
 
 LIST* startList(STATE * s, LIST* l)
 {
-    printf("starting list \n");
     listid++;
     l->n = 0;
     addState(l,s);

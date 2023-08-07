@@ -5,11 +5,9 @@
 
 int main()
 {
-    char * sentence = "ab|c.";
-    char * toMatch = "a";
-    STATE * ptr = post2nfa(sentence);
-    printf("First option : %d\n",ptr->out->out->out->c);
-    printf("Second option : %d\n",ptr->out1->out->c);
-    printf("Does it match ? : %d\n",match(ptr,toMatch));
+    char * regex = "hi.h.e.l.l.o.";
+    char * toMatch = "hihello";
+    STATE * regex_model = post2nfa(regex);
+    printf("Does it match ? : %d\n",match(regex_model,toMatch));
     return 0;
 }

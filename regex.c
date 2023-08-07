@@ -84,13 +84,9 @@ STATE* post2nfa(char* postfix)
         {
             /* Concatenation */
             case '.':
-                printf("Popping\n");
                 e2 = pop();
                 e1 = pop();
-                printf("e2:%d\n",e2.start->c);
-                printf("e1:%d\n",e1.start->c);
                 patch(e1.out,e2.start);
-                printf("Hello\n");
                 push(frag(e1.start, e2.out));
                 break;
 
@@ -103,7 +99,6 @@ STATE* post2nfa(char* postfix)
 
             /* Literal Characters */
             default:
-                printf("Literal\n");
                 s = state(*p,NULL,NULL);
                 push(frag(s,list1(s)));
                 break;
